@@ -1,0 +1,22 @@
+.detailsBanner{
+    width: 100%;
+    background-color: var(--black);
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+.searchPosterContainer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 25px;
+}
+.searchPoster {
+  flex-shrink: 0;
+  max-width: 350px;
+  margin: 10px;
+}
+.posterImg {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
