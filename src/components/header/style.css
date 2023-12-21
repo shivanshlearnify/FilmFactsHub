@@ -1,0 +1,19 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1B4242;
+    color: white;
+}
+.logo{
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.navItems{
+    display: flex;
+}
+.navItems li{
+    margin-left: 20px;
+
+}
