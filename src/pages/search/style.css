@@ -20,3 +20,8 @@
   display: block;
   border-radius: 12px;
 }
+.seacrhItemDeatils a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}

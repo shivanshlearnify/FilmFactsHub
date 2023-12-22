@@ -1,10 +1,11 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
 import "./style.css";
 
 const Search = () => {
+  const navigate = useNavigate();
   const { mediaType, id } = useParams();
 
   const { data } = useFetch(`/${mediaType}/${id}`);
@@ -18,8 +19,17 @@ const Search = () => {
           <div className="searchPoster">
             <img className="posterImg" src={searchImgUrl} alt="img" />
           </div>
+          <div className="seacrhItemDeatils">
+            <div>Title: {data?.title}</div>
+            <a href={data?.homepage} target="_blank">Homepage: {data?.homepage}</a>
+            <div>TagLine: {data?.tagline}</div>
+            <div>Status: {data?.status}</div>
+            <div>Release Date: {data?.release_date}</div>
+            <div>Runtime: {data?.runtime} minutes</div>
+            <div>Imdb Id: {data?.imdb_id}</div>
+            <div>Overview: {data?.overview}</div>
+          </div>
         </div>
-        <div className="seacrhItemDeatils"></div>
       </div>
       <div className="searchCarousel"></div>
     </div>
@@ -27,6 +37,3 @@ const Search = () => {
 };
 
 export default Search;
-
-
-
